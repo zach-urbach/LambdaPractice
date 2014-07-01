@@ -68,7 +68,7 @@ namespace LambdaPractice
 
             //print the product with the longest name to the console using the .First() extension.
             var longestName = products.OrderByDescending(x => x.Length).First();
-            //or Console.WriteLine(products.OrderByDecending(x => x.Length).First());
+            //or Console.WriteLine(products.OrderByDescending(x => x.Length).First());
             Console.WriteLine(longestName);
             Console.WriteLine();
             //print the product with the shortest name to the console using the .First() extension.
@@ -101,7 +101,7 @@ namespace LambdaPractice
             {
                 Console.WriteLine(item);
             }
-            //or 
+            //or Console.WriteLine(String.Join(", ", products.OrderByDescending(x => x.Length).ThenBy(x => x)));
             Console.ReadKey();
         }
     }
