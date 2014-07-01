@@ -14,30 +14,41 @@ namespace LambdaPractice
                 "Football", "Shoulder Pads", "Trail Running Shoes", "Cycling Shoes", "Kayak", "Kayak Paddles"};
 
             //declare a variable kayakProducts and set it equal to all products that contain the word "Kayak"
+       //or list<string>                                           //or .ToList();
             var kayakProducts = products.Where(x => x.Contains("Kayak"));
             //print the kayakProducts to the console using a foreach loop.
+                //or string
             foreach (var item in kayakProducts)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine();
+            //the same as the one abouve but shorter
+                                     //or "\n"
+            Console.WriteLine(string.Join(" ", kayakProducts));
+            Console.WriteLine();
             //declare a variable shoeProducts and set it equal to all products that contain the word "Shoes"
+       //or list<string>                                          //or .ToList();
             var shoeProducts = products.Where(x => x.Contains("Shoes"));
             //print the shoeProducts to the console using a foreach loop.
+                //or string
             foreach (var item in shoeProducts)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine();
             //declare a variable ballProducts and set it equal to all the products that have ball in the name.
+       //or list<string>                                                               //or .ToList();
             var ballProducts = products.Where(x => x.Contains("Ball") || x.Contains("ball"));
             //print the ballProducts to the console using a foreach loop.
+                //or string
             foreach (var item in ballProducts)
             {
                 Console.WriteLine(item);
             }
             Console.WriteLine();
             //sort ballProducts alphabetically and print them to the console.
+
             ballProducts = products.OrderBy(x => x);
             foreach (var item in ballProducts)
             {
