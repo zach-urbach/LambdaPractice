@@ -10,27 +10,37 @@ namespace LambdaPractice
     {
         static void Main(string[] args)
         {
-            var products = new List<string>() {"Basketball", "Baseball", "Tennis Raquet", "Running Shoes", "Wrestling Shoes", "Soccer Ball", "Football", "Shoulder Pads", 
-                "Trail Running Shoes", "Cycling Shoes", "Kayak", "Kayak Paddles"};
+            var products = new List<string>() {"Basketball", "Baseball", "Tennis Raquet", "Running Shoes", "Wrestling Shoes", "Soccer Ball",
+                "Football", "Shoulder Pads", "Trail Running Shoes", "Cycling Shoes", "Kayak", "Kayak Paddles"};
 
             //declare a variable kayakProducts and set it equal to all products that contain the word "Kayak"
-
+            var kayakProducts = products.Where(x => x.Contains("Kayak"));
             //print the kayakProducts to the console using a foreach loop.
-
+            foreach (var item in kayakProducts)
+            {
+                Console.WriteLine(item);
+            }
+          
             //declare a variable shoeProducts and set it equal to all products that contain the word "Shoes"
-
+            var shoeProducts = products.Where(x => x.Contains("Shoes"));
             //print the shoeProducts to the console using a foreach loop.
-
+            foreach (var item in shoeProducts)
+            {
+                Console.WriteLine(item);
+            }
             //declare a variable ballProducts and set it equal to all the products that have ball in the name.
-
+            var ballProducts = products.Where(x => x.Contains("Ball") || x.Contains("ball"));
             //print the ballProducts to the console using a foreach loop.
-
+            foreach (var item in ballProducts)
+            {
+                Console.WriteLine(item);
+            }
             //sort ballProducts alphabetically and print them to the console.
 
             //add six more items to the products list using .add().
 
             //print the product with the longest name to the console using the .First() extension.
-
+            
             //print the product with the shortest name to the console using the .First() extension.
 
             //print the product with the 4th shortest name to the console using an index (you must convert the results to a list using .ToList()).
