@@ -42,11 +42,18 @@ namespace LambdaPractice
                 Console.WriteLine(item);
             }
             //add six more items to the products list using .add().
-
+            products.Add("apples");
+            products.Add("mangos");
+            products.Add("chesse");
+            products.Add("gold fish");
+            products.Add("monkeys");
+            products.Add("chessecake");
             //print the product with the longest name to the console using the .First() extension.
-            
+            var longestName = products.OrderByDescending(x => x.Length).First();
+            Console.WriteLine(longestName);
             //print the product with the shortest name to the console using the .First() extension.
-
+            var shortestName = products.OrderBy(x => x.Length).First();
+            Console.WriteLine(shortestName);
             //print the product with the 4th shortest name to the console using an index (you must convert the results to a list using .ToList()).
 
             //print the ballProduct with the 2nd longest name to the console using an index(you must convert the results to a list using .ToList()).
