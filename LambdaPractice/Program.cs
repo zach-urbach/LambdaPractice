@@ -20,7 +20,7 @@ namespace LambdaPractice
             {
                 Console.WriteLine(item);
             }
-          
+            Console.WriteLine();
             //declare a variable shoeProducts and set it equal to all products that contain the word "Shoes"
             var shoeProducts = products.Where(x => x.Contains("Shoes"));
             //print the shoeProducts to the console using a foreach loop.
@@ -28,6 +28,7 @@ namespace LambdaPractice
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
             //declare a variable ballProducts and set it equal to all the products that have ball in the name.
             var ballProducts = products.Where(x => x.Contains("Ball") || x.Contains("ball"));
             //print the ballProducts to the console using a foreach loop.
@@ -35,12 +36,14 @@ namespace LambdaPractice
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
             //sort ballProducts alphabetically and print them to the console.
             ballProducts = products.OrderBy(x => x);
             foreach (var item in ballProducts)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine();
             //add six more items to the products list using .add().
             products.Add("apples");
             products.Add("mangos");
@@ -51,19 +54,34 @@ namespace LambdaPractice
             //print the product with the longest name to the console using the .First() extension.
             var longestName = products.OrderByDescending(x => x.Length).First();
             Console.WriteLine(longestName);
+            Console.WriteLine();
             //print the product with the shortest name to the console using the .First() extension.
             var shortestName = products.OrderBy(x => x.Length).First();
             Console.WriteLine(shortestName);
+            Console.WriteLine();
             //print the product with the 4th shortest name to the console using an index (you must convert the results to a list using .ToList()).
-
+            var fourthshortestName = products.OrderBy(x => x.Length).Skip(4).Take(1).First();
+            Console.WriteLine(fourthshortestName);
+            Console.WriteLine();
             //print the ballProduct with the 2nd longest name to the console using an index(you must convert the results to a list using .ToList()).
-
+            var secondlongestName = products.OrderBy(x => x.Length).ToList()[3];
+            Console.WriteLine(secondlongestName);
+            Console.WriteLine();
             //declare a variable reversedProducts and set it equal to all products ordered by the longest word first. (use the OrderByDecending() extension).
-
+            var resersedProducts = products.OrderByDescending(x => x.Length).ToList();
             //print out the reversedProducts to the console using a foreach loop.
-
+            foreach (var item in resersedProducts)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
             //print out all the products ordered by the longest word first using the OrderByDecending() extension and a foreach loop.  
             //You will not use a variable to store your list
+            var longestWord = products.OrderByDescending(x => x.Length).ToList();
+            foreach (var item in longestWord)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
         }
