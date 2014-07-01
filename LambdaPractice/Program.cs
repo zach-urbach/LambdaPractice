@@ -36,7 +36,11 @@ namespace LambdaPractice
                 Console.WriteLine(item);
             }
             //sort ballProducts alphabetically and print them to the console.
-
+            ballProducts = products.OrderBy(x => x);
+            foreach (var item in ballProducts)
+            {
+                Console.WriteLine(item);
+            }
             //add six more items to the products list using .add().
 
             //print the product with the longest name to the console using the .First() extension.
