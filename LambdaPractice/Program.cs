@@ -101,7 +101,7 @@ namespace LambdaPractice
             {
                 Console.WriteLine(item);
             }
-
+            //or 
             Console.ReadKey();
         }
     }
